@@ -28,6 +28,7 @@ describe('MasterService without Angular testing support', () => {
     masterService = new MasterService(valueServiceSpy);
 
     expect(masterService.getValue()).toBe(stubValue, 'service returned stub value');
+    // Contar cuantas veces fue llamado un método
     expect(valueServiceSpy.getValue.calls.count()).toBe(1, 'spy method was called once');
     expect(valueServiceSpy.getValue.calls.mostRecent().returnValue).toBe(stubValue);
   });

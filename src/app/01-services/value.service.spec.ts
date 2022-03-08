@@ -15,6 +15,8 @@ describe('Service: Value', () => {
   it('#getObservableValue should return value from observable', (done: DoneFn) => {
     service.getObservableValue().subscribe((value) => {
       expect(value).toBe('observable value');
+      // Avisando a jasmine cuando ya termino la prueba
+      // Por que es algo asincrono
       done();
     });
   });
